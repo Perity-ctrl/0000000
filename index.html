@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>展开内容示例</title>
+  <title>下载页面</title>
   <style>
-    .hidden {
-      display: none;
+    body {
+      margin: 0;
+      background-color: #0000FF; /* 纯蓝色背景 */
+      color: white;
+      font-size: 24px;
+      font-family: sans-serif;
     }
-    .content-box {
-      margin-top: 10px;
-      border-left: 2px solid #888;
-      padding-left: 10px;
+    .container {
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     a {
-      color: blue;
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    a:hover {
       text-decoration: underline;
-      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
-  <p><a onclick="toggleContent()">点击这里查看更多内容</a></p>
-
-  <div id="extraContent" class="hidden content-box">
-    <p>这是第一段内容，<a href="https://example.com/1" target="_blank">点击跳转</a></p>
-    <p>这是第二段内容，<a href="https://example.com/2" target="_blank">继续阅读</a></p>
-    <p>这是第三段内容，<a href="files/hei.docx" download>下载文档</a>
+  <div class="container">
+    <a href="abc.docx" download>第一</a>
+    <a href="def.docx" download>第二</a>
   </div>
-
-  <script>
-    function toggleContent() {
-      const content = document.getElementById('extraContent');
-      content.classList.toggle('hidden');
-    }
-  </script>
-
 </body>
 </html>
