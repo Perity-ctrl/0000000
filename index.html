@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>展开内容示例</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .content-box {
+      margin-top: 10px;
+      border-left: 2px solid #888;
+      padding-left: 10px;
+    }
+    a {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <p><a onclick="toggleContent()">点击这里查看更多内容</a></p>
+
+  <div id="extraContent" class="hidden content-box">
+    <p>这是第一段内容，<a href="https://example.com/1" target="_blank">点击跳转</a></p>
+    <p>这是第二段内容，<a href="https://example.com/2" target="_blank">继续阅读</a></p>
+    <p>这是第三段内容，<a href="https://example.com/3" target="_blank">了解更多</a></p>
+  </div>
+
+  <script>
+    function toggleContent() {
+      const content = document.getElementById('extraContent');
+      content.classList.toggle('hidden');
+    }
+  </script>
+
 </body>
 </html>
